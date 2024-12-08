@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конструктор десертов</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex flex-col items-center justify-center" style="background-color: rgb(229, 220, 205);">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Верхняя панель -->
+    <div class="flex justify-between items-center mb-6">
+      <!-- Логотип и название -->
+      <div class="flex items-center">
+        <img src="logo.png" alt="Логотип" class="w-16 h-15 mr-2">
+        <span class="text-xl font-semibold text-gray-800">
+          <a href="main.html">YumMe</a>
+        </span>
+      </div>
+      <!-- Кнопка назад -->
+      <button id="back-button" class="mr-4">
+        <img src="back-button.png" alt="Назад" class="w-6 h-6">
+      </button>
+    </div>
+
+    <!-- Заголовок раздела -->
+    <h1 id="title" class="text-2xl font-semibold text-center text-gray-800 mb-4">Создай свой десерт!</h1>
+
+    <!-- Аватар -->
+    <div class="flex justify-center mb-6">
+      <img src="macaron.png" alt="Десерт" class="w-32 h-32">
+    </div>
+
+    <!-- Опции выбора -->
+    <div id="options" class="grid grid-cols-2 gap-4 mb-4">
+      <!-- Опции будут добавляться динамически -->
+    </div>
+
+    <!-- Кнопка продолжения -->
+    <button id="next-step" class="w-full py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">
+      Продолжить
+    </button>
+
+    <!-- Итоговый блок -->
+    <div id="final-step" class="hidden mt-8">
+      <div class="bg-white p-4 rounded-lg shadow-md text-center">
+        <h2 id="dessert-name" class="text-2xl font-semibold text-gray-800 mb-4"></h2>
+        <div id="ingredients-list" class="grid grid-cols-2 gap-4">
+          <!-- Ингредиенты будут добавляться динамически -->
+        </div>
+        <p id="dessert-price" class="mt-4 text-lg font-bold text-gray-800"></p>
+      </div>
+      <button id="add-to-cart" class="w-full py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 mt-6">
+        В корзину!
+      </button>
+    </div>
+  </div>
+
+  <script src="constructor.js"></script>
+</body>
+</html>

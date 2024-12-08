@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen" style="background-color: rgb(229, 220, 205);">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Верхняя панель -->
+    <div class="flex justify-between items-center mb-6">
+      <button id="back-button">
+        <a href="main.html">
+        <img src="back-button.png" alt="Назад" class="w-6 h-6">
+        </a>
+      </button>
+      <h1 class="text-xl font-semibold text-gray-800">Заказ</h1>
+      <button id="search-button">
+        <img src="search.png" alt="Поиск" class="w-6 h-6">
+      </button>
+    </div>
+
+    <!-- Список товаров -->
+    <div id="order-items" class="space-y-4">
+      <!-- Товары будут добавляться динамически -->
+    </div>
+
+    <!-- Итоговая информация -->
+    <div class="bg-gray-100 p-4 rounded-lg shadow mt-8">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-sm font-semibold text-gray-800">Стоимость:</span>
+        <span id="total-price" class="text-sm text-gray-800">₸0</span>
+      </div>
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-sm font-semibold text-gray-800">Доставка:</span>
+        <span id="delivery-price" class="text-sm text-gray-800">₸0</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span class="text-lg font-bold text-gray-800">Итого:</span>
+        <span id="final-price" class="text-lg font-bold text-gray-800">₸0</span>
+      </div>
+    </div>
+
+    <!-- Кнопка оплаты -->
+    <button id="pay-button" class="w-full py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 mt-6">
+      Оплатить
+    </button>
+  </div>
+
+  <script src="purchase.js"></script>
+</body>
+</html>

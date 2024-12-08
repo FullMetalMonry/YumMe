@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Log in</title>
+</head>
+<body class="h-screen bg-gradient-to-br from-beige-100 to-beige-300 flex items-center justify-center" style="background-color: rgb(229, 220, 205);">
+    <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-md w-full max-w-md" style="background-color: rgb(255,245,228);">
+        <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Вход</h1>
+        <form>
+          <!-- Поле для ввода электронной почты -->
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Электронная почта</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Введите email"
+              class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+              required
+            >
+          </div>
+          <!-- Поле для ввода пароля -->
+          <div class="mb-4">
+            <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Введите пароль"
+              class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+              required
+            >
+          </div>
+          <!-- Радиокнопки для выбора роли -->
+          <div class="flex justify-around mb-4">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="userType" value="client" class="w-5 h-5 text-blue-500 border-gray-300 focus:ring-blue-400">
+              <span class="text-gray-700">Я клиент</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="userType" value="confectioner" class="w-5 h-5 text-blue-500 border-gray-300 focus:ring-blue-400">
+              <span class="text-gray-700">Я кондитер</span>
+            </label>
+          </div>
+          <!-- Кнопка для входа -->
+          <button 
+            type="submit"
+            class="w-full inline-block py-2 bg-blue-400 text-white font-semibold rounded-xl shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            style="background-color: rgb(171, 205, 239);";
+          >
+          <a href="main.html">
+            Войти
+          </a>
+          </button>
+          <!-- Ссылка "Забыли пароль?" -->
+          <p class="mt-4 text-center text-sm text-gray-500">
+            <a href="/forgot-password" class="text-gray-400 hover:underline">Забыли пароль?</a>
+          </p>
+        </form>
+      </div>
+</body>
+</html>

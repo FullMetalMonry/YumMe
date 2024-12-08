@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Основная страница</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen" style="background-color: rgb(229, 220, 205);">
+  <!-- Header -->
+  <header class="w-full py-4" style="background-color: rgb(229, 220, 205);">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <!-- Логотип и название -->
+      <div class="flex items-center space-x-2">
+        <img src="logo.png" alt="YumMe Logo" class="w-16 h-15">
+        <a href="main.html" class="text-lg font-semibold text-gray-800">YumMe</a>
+      </div>
+
+      <!-- Поисковая строка -->
+      <div class="relative w-full max-w-xs mx-auto">
+        <input
+          type="text"
+          placeholder="Найти новые вкусы!"
+          class="w-full px-4 py-2 pl-10 rounded-full shadow border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+        <img
+          src="search.png"
+          alt="Search Icon"
+          class="absolute left-3 top-2.5 w-5 h-5 opacity-50"
+        >
+      </div>
+
+
+      <!-- Кнопка для открытия меню -->
+      <button
+        id="menuButton"
+        class="flex items-center space-x-2 bg-gray-200 py-2 px-4 rounded-lg shadow hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+      >
+        <span class="text-gray-800 font-medium">Меню</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Меню (скрытое по умолчанию) -->
+  <div id="menuDropdown" class="hidden absolute top-16 right-4 bg-white rounded-lg shadow-lg w-64 z-40">
+    <ul class="py-2 text-gray-700">
+      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Мой профиль</li>
+      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Настройки</li>
+      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+        <a href="cart.html">Корзина</a>
+      </li>
+      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Выход</li>
+    </ul>
+  </div>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Сетка блоков -->
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+      <!-- Блок Колеса вкусов -->
+      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4 transform transition duration-300 hover:scale-105">
+        <img src="koleso.png" alt="Колесо вкусов" class="w-16 h-16 mb-4">
+        <p class="text-center text-gray-800 font-semibold">
+          <a href="wheel-of-taste.html">
+            Колесо вкусов
+          </a>
+        </p>
+        <p class="text-center text-gray-600 text-sm"></p>
+      </div>
+      <!-- Кондитеры -->
+      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4 transform transition duration-300 hover:scale-105">
+        <img src="konditer.png" alt="Каталог кондитеров" class="w-16 h-16 mb-4">
+        <p class="text-center text-gray-800 font-semibold">Каталог кондитеров</p>
+        <p class="text-center text-gray-600 text-sm"></p>
+      </div>
+      <!-- Создаие де сетра-->
+      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4 transform transition duration-300 hover:scale-105">
+        <img src="ar.png" alt="Создать десерт" class="w-16 h-16 mb-4">
+        <p class="text-center text-gray-800 font-semibold">AR - функия</p>
+        <p class="text-center text-gray-600 text-sm"></p>
+      </div>
+      <!-- Каталог -->
+      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4 transform transition duration-300 hover:scale-105">
+        <img src="ai.png" alt="Каталог десертов" class="w-16 h-16 mb-4">
+        <p class="text-center text-gray-800 font-semibold">AI - функция</p>
+        <p class="text-center text-gray-600 text-sm"></p>
+      </div>
+      <!-- Создать десерт -->
+      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4 transform transition duration-300 hover:scale-105">
+        <img src="make-desert.png" alt="Робот AI" class="w-20 h-20 mb-4">
+        <p class="text-center text-gray-800 font-semibold">
+          <a href="constructor.html">
+            Создать десерт
+          </a> 
+        </p>
+        <p class="text-center text-gray-600 text-sm"></p>
+      </div>
+      <!-- Каталог десертов   -->
+      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4 transform transition duration-300 hover:scale-105">
+        <img src="catalog.png" alt="Кулинар" class="w-16 h-16 mb-4">
+        <p class="text-center text-gray-800 font-semibold">Каталог десертов</p>
+        <p class="text-center text-gray-600 text-sm"></p>
+      </div>
+
+
+      
+    </div>
+  </main>
+
+
+
+
+
+
+  <script>
+    // Логика для открытия/закрытия меню
+    const menuButton = document.getElementById('menuButton');
+    const menuDropdown = document.getElementById('menuDropdown');
+
+    menuButton.addEventListener('click', () => {
+      menuDropdown.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
