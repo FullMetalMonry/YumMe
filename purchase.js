@@ -22,7 +22,7 @@ const renderOrder = () => {
     orderItem.className = 'flex justify-between items-center bg-white rounded-lg shadow p-4 mb-4';
     orderItem.innerHTML = `
       <div class="flex items-center">
-        <img src="dessert.png" alt="${item.name}" class="w-16 h-16 rounded-lg mr-4">
+        <img src="desert.png" alt="${item.name}" class="w-16 h-16 rounded-lg mr-4">
         <div>
           <h2 class="text-lg font-semibold text-gray-800">${item.name}</h2>
           <p class="text-sm text-gray-600">₸${item.price}</p>
